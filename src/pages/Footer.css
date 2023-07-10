@@ -1,0 +1,120 @@
+.footer_wrap {
+  width: 100%;
+  background-color: #444;
+  box-sizing: border-box;
+  padding: 25px;
+  margin-top: 50px;
+}
+
+.footer_wrap .footer {
+  display: flex;
+  position: relative;
+  width: 1300px;
+  height: 300px;
+  font-size: 14px;
+  font-family: "Pretendard Variable";
+  color: #fff;
+  border: 2px solid #ddd;
+  margin: 0px auto;
+  overflow: hidden;
+}
+
+.footer_wrap .footer .footer_left {
+  width: 935px;
+  padding: 35px 0px 0px 115px;
+}
+
+.footer_wrap .footer .footer_left li {
+  margin-bottom: 10px;
+}
+
+.footer_wrap .footer .footer_left li:nth-child(1) {
+  margin-bottom: 35px;
+}
+
+.footer_wrap .footer .footer_left li:nth-child(5) {
+  margin-bottom: 40px;
+}
+
+.footer_wrap .footer .footer_left li span {
+  margin-right: 30px;
+}
+
+.footer_wrap .footer .footer_menu {
+  display: none;
+  position: absolute;
+  top: 65px;
+  width: 120px;
+  background-color: #444;
+  border: 1px solid #fff;
+  padding: 15px;
+}
+
+.footer_wrap .footer .footer_menu li {
+  margin-bottom: 10px;
+}
+
+.footer_wrap .footer .footer_menu li:hover {
+  text-decoration: underline;
+}
+
+.footer_wrap .footer .me01 {
+  left: 100px;
+}
+
+.footer_wrap .footer .me02 {
+  left: 183px;
+}
+
+.footer_wrap .footer .me03 {
+  left: 260px;
+}
+
+.footer_wrap .footer .footer_right {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 40px;
+}
+
+.footer_wrap .footer .footer_right .txt_box {
+  width: 145px;
+  height: 60px;
+  font-size: 10px;
+  font-family: "Bookk Myungjo";
+  text-align: center;
+  border: 1px solid #fff;
+  padding: 0px;
+}
+
+.footer_wrap .footer .footer_right .txt_box li {
+  height: 20px;
+  line-height: 20px;
+}
+
+.footer_wrap .footer .footer_right .txt_box li:last-child {
+  border-top: 1px solid #fff;
+}
+
+.footer_wrap .footer .footer_right p {
+  padding-top: 3px;
+  margin-bottom: 70px;
+}
+
+.footer_wrap .footer .footer_right .sns_img {
+  display: flex;
+  justify-content: space-between;
+  width: 130px;
+  padding: 0px;
+}
+
+.footer_wrap .footer .footer_right .sns_img li {
+  width: 40px;
+  height: 40px;
+}
+
+.footer_wrap .footer .footer_right .sns_img li img {
+  width: 100%;
+  height: auto;
+}
