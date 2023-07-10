@@ -14,10 +14,10 @@ export default function slide_banner() {
       onSwiper={(swiper) => console.log(swiper)} */
       autoplay={{ delay: 3500 }}
     >
-    <SwiperSlide><img src='/images/banner_Citrus.png' alt='img'/></SwiperSlide>
-    <SwiperSlide><img src='/images/banner_Floral.png' alt='img'/></SwiperSlide>
-    <SwiperSlide><img src='/images/banner_Fruity.png' alt='img'/></SwiperSlide>
-  </Swiper>
+      <SwiperSlide><img src={process.env.PUBLIC_URL + '/images/banner_Citrus.png'} alt='img'/></SwiperSlide>
+      <SwiperSlide><img src={process.env.PUBLIC_URL + '/images/banner_Floral.png'} alt='img'/></SwiperSlide>
+      <SwiperSlide><img src={process.env.PUBLIC_URL + '/images/banner_Fruity.png'} alt='img'/></SwiperSlide>
+    </Swiper>
   )
 }
 

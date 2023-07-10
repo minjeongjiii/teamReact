@@ -6,7 +6,7 @@ export default function New () {
     <div>
       <h1>New Huntsman Collection</h1>
       <section className='new_item'>
-        <img src='/images/Huntsman_Scent.png' alt='Huntsman_Scent'/>
+        <img src={process.env.PUBLIC_URL + '/images/Huntsman_Scent.png'} alt='Huntsman_Scent'/>
       </section>
     </div>
   )
