@@ -59,12 +59,15 @@ export default function Footer() {
         </ul>
         <p>공식 온라인몰</p>
         <ul className="sns_img">
-          <li><img src="/images/sns_insta.png" alt="sns_img"/></li>
-          <li><img src="/images/sns_facebook.png" alt="sns_img"/></li>
-          <li><img src="/images/sns_youtube.png" alt="sns_img"/></li>
+          <li><img src={process.env.PUBLIC_URL + '/images/sns_insta.png'} alt="sns_img"/></li>
+          <li><img src={process.env.PUBLIC_URL + '/images/sns_facebook.png'} alt="sns_img"/></li>
+          <li><img src={process.env.PUBLIC_URL + '/images/sns_youtube.png'} alt="sns_img"/></li>
         </ul>
       </div>
     </footer>
   </div>
   )
 }
+
+
+
