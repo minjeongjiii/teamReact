@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/teamReact/static/css/main.f935ab12.css",
-    "main.js": "/teamReact/static/js/main.0bba29c4.js",
+    "main.css": "/teamReact/static/css/main.e036165d.css",
+    "main.js": "/teamReact/static/js/main.6cd9eb47.js",
     "static/js/787.241534ed.chunk.js": "/teamReact/static/js/787.241534ed.chunk.js",
     "index.html": "/teamReact/index.html",
-    "main.f935ab12.css.map": "/teamReact/static/css/main.f935ab12.css.map",
-    "main.0bba29c4.js.map": "/teamReact/static/js/main.0bba29c4.js.map",
+    "main.e036165d.css.map": "/teamReact/static/css/main.e036165d.css.map",
+    "main.6cd9eb47.js.map": "/teamReact/static/js/main.6cd9eb47.js.map",
     "787.241534ed.chunk.js.map": "/teamReact/static/js/787.241534ed.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f935ab12.css",
-    "static/js/main.0bba29c4.js"
+    "static/css/main.e036165d.css",
+    "static/js/main.6cd9eb47.js"
   ]
 }
