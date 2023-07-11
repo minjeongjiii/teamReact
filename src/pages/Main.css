@@ -28,36 +28,45 @@ h1 {
   width: 100%;
 }
 .main_container .best_seller .best_wrap .best_right {
-  width: 770px;
+  width: 770px; height: 600px;
 }
 .main_container .best_seller .best_wrap .best_right ul {
   display: flex;
+  flex-wrap: wrap;
   width: 100%;
-  height: 300px;
+  height: 100%;
   margin: 0px;
   padding: 0px;
 }
 .main_container .best_seller .best_wrap .best_right ul li {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
   position: relative;
-  width: 33.3333%;
+  width: 256.66px; height: 300px;
   box-sizing: border-box;
-  padding-bottom: 30px;
-}
-.main_container .best_seller .best_wrap .best_right ul li img {
-  filter: drop-shadow(5px 5px 5px #999);
-  margin-bottom: 15px;
 }
 .main_container .best_seller .best_wrap .best_right ul li p {
   font-family: 'Noto Serif', serif;
   font-size: 14px;
-  margin: 0px;
+  margin: 5px 0px;
 }
 .main_container .best_seller .best_wrap .best_right ul li p:nth-child(3) {
   font-family: "Pretendard Variable";
+}
+.main_container .best_seller .best_wrap .best_right ul li:hover p {
+  opacity: 0;
+}
+.main_container .best_seller .best_wrap .best_right ul li:hover button {
+  opacity: 1;
+}
+.main_container .best_seller .best_wrap .best_right ul li img {
+  width: 80%;
+  filter: drop-shadow(5px 5px 5px #999);
+}
+.main_container .best_seller .best_wrap .best_right ul li:hover img {
+  scale: 1.02;
 }
 .main_container .best_seller .best_wrap .best_right ul li button {
   position: absolute;
@@ -83,50 +92,79 @@ h1 {
   border: 1px solid #222;
   box-sizing: border-box;
 }
-.main_container .best_seller .best_wrap .best_right ul li:hover p {
-  opacity: 0;
-}
-.main_container .best_seller .best_wrap .best_right ul li:hover button {
-  opacity: 1;
-}
-.main_container .best_seller .best_wrap .best_right ul li:hover img {
-  scale: 1.02;
-}
-.main_container .best_seller .best_wrap .best_right .best_right_top li:nth-child(1) {
+.main_container .best_seller .best_wrap .best_right li:nth-child(1) {
   background-color: #E4E5E9;
 }
-.main_container .best_seller .best_wrap .best_right .best_right_top li:nth-child(2) {
+.main_container .best_seller .best_wrap .best_right li:nth-child(2) {
   background-color: #D3C9B0;
 }
-.main_container .best_seller .best_wrap .best_right .best_right_top li:nth-child(3) {
+.main_container .best_seller .best_wrap .best_right li:nth-child(3) {
   background-color: #F6EADA;
 }
-.main_container .best_seller .best_wrap .best_right .best_right_bottom li:nth-child(1) {
+.main_container .best_seller .best_wrap .best_right li:nth-child(4) {
   background-color: #F4F4F4;
 }
-.main_container .best_seller .best_wrap .best_right .best_right_bottom li:nth-child(2) {
+.main_container .best_seller .best_wrap .best_right li:nth-child(5) {
   background-color: #E9E8D4;
 }
-.main_container .best_seller .best_wrap .best_right .best_right_bottom li:nth-child(3) {
+.main_container .best_seller .best_wrap .best_right li:nth-child(6) {
   background-color: #B6BB90;
 }
 
 .Modal {
   position: absolute;
-  width: 500px;
-  top: 40px;
-  left: 40px;
-  right: 40px;
-  bottom: 40px;
-  background-color: papayawhip;
+  width: 900px; height: 500px;
+  left: 0px; right: 0px;
+  font-family: "Pretendard Variable";
+  background-color: #EEEEEE;
+  border-radius: 5px;
+  margin: 100px auto;
+}
+.Modal .popup_close_btn {
+  position: absolute; top: 30px; right: 30px;
+  border: none;
+  background-color: transparent;
+}
+.popup_inner {
+  display: flex;
+  position: relative;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 50px;
+}
+.popup_inner div{
+  display: flex;
+  flex-direction: column;
+  justify-content:center ;
+}
+.popup_inner div:first-child {
+  display: flex;
+  width: 50%;
+  padding: 20px 0px 50px;
+  box-sizing: border-box;
+}
+.popup_inner div:first-child img {
+  width: 80%;
+  filter: drop-shadow(5px 5px 5px #999);
+}
+.popup_inner div:last-child{
+  width: 50%;
+}
+.popup_inner div:last-child .name {
+  font-size: 18px;
+  font-weight: 600;
+}
+.popup_inner div:last-child p:nth-child(2) {
+  text-align: right;
+}
+.popup_inner div:last-child p:nth-child(3) {
+  height: 130px;
+}
+.popup_inner div:last-child .popup_cart_btn {
+  font-weight: 600;
+  padding: 2px 0px;
+}
+.popup_inner div:last-child .popup_cart_btn:hover {
+  color: gold;
 }
 
-.new_item {
-  width: 1300px;
-  height: 600px;
-  margin: 0px auto 130px;
-  margin-bottom: 5px;
-}
-.new_item img {
-  width: 100%;
-}

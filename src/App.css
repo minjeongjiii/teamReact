@@ -71,5 +71,6 @@ font-family: 'Noto Serif', serif;
 .swiper {
   margin-bottom: 30px;
 }
-
-
+.sub_container {
+  height: 1000px;
+}

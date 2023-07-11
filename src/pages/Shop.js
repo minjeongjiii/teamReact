@@ -13,10 +13,10 @@ export default function Shop() {
           <Nav.Link style={{color:'green'}} onClick={()=>{navigate('/shop')}}>Cologne</Nav.Link>
         </Nav.Item>
         <Nav.Item>
-          <Nav.Link style={{color:'green'}}>Bath & Body</Nav.Link>
+          <Nav.Link style={{color:'green'}} onClick={()=>{navigate('/shop/bnb')}}>Bath & Body</Nav.Link>
         </Nav.Item>
         <Nav.Item>
-          <Nav.Link style={{color:'green'}} eventKey="link-2">Home Fragrance</Nav.Link>
+          <Nav.Link style={{color:'green'}} onClick={()=>{navigate('/shop/home')}} eventKey="link-2">Home Fragrance</Nav.Link>
         </Nav.Item>
       </Nav>
       <Outlet></Outlet>
