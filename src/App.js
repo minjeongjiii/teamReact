@@ -71,6 +71,7 @@ function App() {
             <div>
               <SlideBanner/>
               <Container>
+                <p className='path'>shop - cologne</p>
                 <Row>
                   {
                     items.map((item, index)=>{
@@ -103,6 +104,7 @@ function App() {
           <div>
             <Shop/>
             <div className='sub_container'>
+              <p className='path'>shop - Bath & Body</p>
               <h1>Body & Bath</h1>
             </div>
           </div>
@@ -111,6 +113,7 @@ function App() {
           <div>
             <Shop/>
             <div className='sub_container'>
+              <p className='path'>shop - Bath & Body</p>
               <h1>Home Fragrance</h1>
             </div>
           </div>
