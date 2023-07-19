@@ -1,4 +1,5 @@
 import React from 'react'
+import './Main.css';
 import styled from 'styled-components'
 import { useParams } from 'react-router-dom'
 import { addItem } from './store'
@@ -21,6 +22,7 @@ const ItemImg =  styled.div`
 `
 const ItemTxt =  styled.div`
   width: 850px;
+  font-family: "Pretendard Variable";
   padding-top: 50px
 `
 const Button = styled.button`
@@ -38,8 +40,10 @@ const Button = styled.button`
 
 export default function Detail(props) {
   const {items} = props
+  const {homeitems} = props
   const {id} = useParams()
   const dispatch = useDispatch()
+  console.log({homeitems})
   return (
     <Wrap>
       <Inner>
@@ -52,8 +56,13 @@ export default function Detail(props) {
           <p>{items[id].gift}</p>
           <p>{items[id].scent}</p>
           <Button onClick={()=>{
-            dispatch(addItem({id: items[id].id,name_ko: items[id].name_ko,count: 1
-            }))
+            dispatch(addItem({
+              id: items[id].id,
+              src: items[id].src,
+              name_ko: items[id].name_ko,
+              price: items[id].price,
+              count: 1
+            }));alert('장바구니에 담았습니다.');
           }}>장바구니</Button>
         </ItemTxt>
       </Inner>

@@ -2,11 +2,14 @@ import './App.css';
 import { useState } from 'react';
 /* component */
 import data from './pages/ProuductData'
+import dataBath from './pages/SubDataBath'
+import dataHome from './pages/SubDataHome'
 import SlideBanner from './pages/SlideBanner';
 import Video from './pages/Video';
 import Main from './pages/Main';
 import Shop from './pages/Shop';
 import New from './pages/New';
+import Notice from './pages/Notice';
 import Detail from './pages/Detail';
 import Cart from './pages/Cart'
 import Footer from './pages/Footer';
@@ -23,6 +26,8 @@ import { addItem } from './pages/store';
 function App() {
   const navigate = useNavigate()
   const [items] = useState(data)
+  const [bathitems] = useState(dataBath)
+  const [homeitems] = useState(dataHome)
   const state = useSelector((state)=>state)
   const dispatch = useDispatch()
 
@@ -40,7 +45,6 @@ function App() {
               style={{ maxHeight: '100px' }}
               navbarScroll
             >
-              <Nav.Link onClick={()=>{navigate('/')}}>Home</Nav.Link>
               <Nav.Link onClick={()=>{navigate('new')}}>What's New</Nav.Link>
               <Nav.Link onClick={()=>{navigate('shop')}}>Shop</Nav.Link>
               <Nav.Link onClick={()=>{navigate('cart')}}>Cart</Nav.Link>
@@ -62,7 +66,14 @@ function App() {
           <div className='container_div'>
             <Video/>
             <Main/>
-            <New/>
+            <Link to='new' className='new_a'>
+              <h1>Lighting The Way With UNICEF</h1>
+              <span>자선활동 미션 더 알아보기</span>
+              <div>
+                <img src={process.env.PUBLIC_URL + '/images/unicef01.png'} alt='img'/>
+              </div>
+            </Link>
+            <Notice/>
           </div>
         } />
         <Route path='new' element={<New/>}/>
@@ -77,7 +88,7 @@ function App() {
                     items.map((item, index)=>{
                       return (
                         <Col key={index} className='itemBox'>
-                          <Link to={`/detail/${index}`} style={{textDecoration:'none'}}>
+                          <Link to={`/cologne/${index}`} style={{textDecoration:'none'}}>
                             <img className='itemImg' src={item.src} alt='img' style={{width:280}}/>
                             <h4 className='txt'>{item.name_ko}</h4>
                             <p className='txt'>￦ {item.price}</p>
@@ -89,7 +100,7 @@ function App() {
                               name_ko: item.name_ko,
                               price: item.price,
                               count: 1
-                            }))
+                            }));alert('장바구니에 담았습니다.');
                           }}>cart</button>
                         </Col>
                       )
@@ -103,22 +114,72 @@ function App() {
         <Route path='/shop/bnb' element={
           <div>
             <Shop/>
-            <div className='sub_container'>
+            <SlideBanner/>
+            <Container>
               <p className='path'>shop - Bath & Body</p>
-              <h1>Body & Bath</h1>
-            </div>
+              <Row>
+                {
+                  bathitems.map((item, index)=>{
+                    return (
+                      <Col key={index} className='itemBox'>
+                        <Link to={`/bnb/${index}`} style={{textDecoration:'none'}}>
+                          <img className='itemImg' src={item.src} alt='img' style={{width:280}}/>
+                          <h4 className='txt'>{item.name_ko}</h4>
+                          <p className='txt'>￦ {item.price}</p>
+                        </Link>
+                        <button className='cartBtn' onClick={()=>{
+                          dispatch(addItem({
+                            id: item.id,
+                            src: item.src,
+                            name_ko: item.name_ko,
+                            price: item.price,
+                            count: 1
+                          }));alert('장바구니에 담았습니다.');
+                        }}>cart</button>
+                      </Col>
+                    )
+                  })
+                }
+              </Row>
+            </Container>
           </div>
         }/>
         <Route path='/shop/home' element={
           <div>
             <Shop/>
-            <div className='sub_container'>
-              <p className='path'>shop - Bath & Body</p>
-              <h1>Home Fragrance</h1>
-            </div>
+            <SlideBanner/>
+            <Container>
+              <p className='path'>shop - Home Fragrance</p>
+              <Row>
+                {
+                  homeitems.map((item, index)=>{
+                    return (
+                      <Col key={index} className='itemBox'>
+                        <Link to={`/home/${index}`} style={{textDecoration:'none'}}>
+                          <img className='itemImg' src={item.src} alt='img' style={{width:280}}/>
+                          <h4 className='txt'>{item.name_ko}</h4>
+                          <p className='txt'>￦ {item.price}</p>
+                        </Link>
+                        <button className='cartBtn' onClick={()=>{
+                          dispatch(addItem({
+                            id: item.id,
+                            src: item.src,
+                            name_ko: item.name_ko,
+                            price: item.price,
+                            count: 1
+                          }));alert('장바구니에 담았습니다.');
+                        }}>cart</button>
+                      </Col>
+                    )
+                  })
+                }
+              </Row>
+            </Container>
           </div>
         }/>
-        <Route path='/detail/:id' element={<Detail items={items}/>}/>
+        <Route path='/cologne/:id' element={<Detail items={items}/>}/>
+        <Route path='/bnb/:id' element={<Detail items={bathitems}/>}/>
+        <Route path='/home/:id' element={<Detail items={homeitems}/>}/>
         <Route path='cart' element={<Cart/>}/>
       </Routes>
       <Footer/>

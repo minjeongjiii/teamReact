@@ -54,9 +54,9 @@ export default function Cart() {
                     <span className='item_name'>{state.cart[i].name_ko}</span>
                     <span className='item_price'>￦ {formatPrice(item.price * item.count)}</span>
                     <div className='count'>
-                      <button onClick={()=>dispatch(addCount(state.cart[i].id))}>+</button>
-                      <span>{state.cart[i].count}</span>
                       <button onClick={()=>dispatch(subCount(state.cart[i].id))}>-</button>
+                      <span>{state.cart[i].count}</span>
+                      <button onClick={()=>dispatch(addCount(state.cart[i].id))}>+</button>
                     </div>
                   </div>
                   <div>

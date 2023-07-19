@@ -7,7 +7,12 @@ font-family: 'Nanum Myeongjo', serif;
 font-family: 'Noto Serif', serif;
 */
 
-
+h1 {
+  width: 1300px;
+  font-family: 'Noto Serif', serif;
+  padding-left: 50px;
+  margin: 30px auto 30px;
+ }
 .logo {
   font-family: 'Nanum Myeongjo', serif;
   font-weight: 800;
@@ -59,13 +64,13 @@ font-family: 'Noto Serif', serif;
 .cartBtn {
   display: none;
   position: absolute;  
-  left: 0px; right: 0px;
-  width: 90px; height: 90px; line-height: 90px;
+  top: 40px; right: 50px;
+  width: 40px; height: 40px; line-height: 40px;
   font-family:"Pretendard Variable";
+  font-size: 14px;
   text-align: center;
   border: none;
   border-radius: 50%;
-  margin: 0 auto;
 }
 .cartBtn:hover {
   font-weight: 600;
@@ -78,6 +83,43 @@ font-family: 'Noto Serif', serif;
 }
 .sub_container {
   width: 1300px; height: 1000px;
-  padding-top: 100px;
   margin: 0px auto;
 }
+.new_a {
+  display: block;
+  width: 1300px;
+  color: #000;
+  text-decoration: none;
+  box-sizing: border-box;
+  margin: 0px auto;
+}
+.new_a span {
+  display: block;
+  font-family:"Pretendard Variable";
+  font-weight: 600;
+  text-align: right;
+  color: #555;
+}
+.new_a div {
+  background-color: #F4D3D3;
+  padding: 23px;
+}
+
+/*.toast-alert {
+   position: fixed;
+  bottom: 20px;
+  left: 20px; 
+  width: 250px; height: 40px;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: black;
+  background-color: rgba(255, 127, 80, 0.4);
+  box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 127, 80, 0.1);
+  padding: 5px;
+}
+.toast-alert p {
+  margin: 0;
+}*/

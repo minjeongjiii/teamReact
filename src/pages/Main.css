@@ -1,12 +1,7 @@
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/variable/pretendardvariable-dynamic-subset.css");
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@200;300;400;500;600;700&display=swap');
 
-h1 {
- width: 1300px;
- font-family: 'Noto Serif', serif;
- padding-left: 50px;
- margin: 30px auto 30px;
-}
+
 .main_container {
   width: 1300px;
   margin: 0px auto 80px;
@@ -154,10 +149,10 @@ h1 {
   font-size: 18px;
   font-weight: 600;
 }
-.popup_inner div:last-child p:nth-child(2) {
+.popup_inner div:last-child p:nth-child(3) {
   text-align: right;
 }
-.popup_inner div:last-child p:nth-child(3) {
+.popup_inner div:last-child p:nth-child(4) {
   height: 130px;
 }
 .popup_inner div:last-child .popup_cart_btn {
